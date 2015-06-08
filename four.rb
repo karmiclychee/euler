@@ -7,7 +7,7 @@ module Euler
     attr_reader :result
 
     def initialize(digits)
-      values = (2..(10**digits - 1)).to_a
+      values = ((10**(digits-2))..(10**digits-1)).to_a
       @result = 0
       find(values)
     end
@@ -19,6 +19,7 @@ module Euler
       set.each do |v|
         product = v * set.last
         @result = product if product > @result && ("#{product}" == "#{product}".reverse)
+        break if v == set.last
       end
 
       set.pop
