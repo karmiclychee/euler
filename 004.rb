@@ -3,7 +3,7 @@
 # Find the largest palindrome made from the product of two 3-digit numbers.
 
 module Euler
-  class Palindrome
+  class Four
     attr_reader :result
 
     def initialize(digits)
@@ -29,5 +29,5 @@ module Euler
   end
 end
 
-p Euler::Palindrome.new(2).result
-p Euler::Palindrome.new(3).result
+p Euler::Four.new(2).result
+p Euler::Four.new(3).result
